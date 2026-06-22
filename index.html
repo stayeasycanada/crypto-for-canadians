@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto for Canadians — Start Simple</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3a;
+      --text: #e8eaf0;
+      --muted: #8b8fa8;
+      --accent: #f7931a; /* Bitcoin orange */
+      --green: #00c896;
+      --white: #ffffff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 64px 24px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(247, 147, 26, 0.12);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(247, 147, 26, 0.25);
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 28px;
+    }
+
+    .trust-note {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .trust-note::before {
+      content: "🇨🇦";
+    }
+
+    /* SECTION */
+    section {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      margin-bottom: 36px;
+      font-size: 0.95rem;
+    }
+
+    /* STEPS */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      position: relative;
+      padding-bottom: 32px;
+    }
+
+    .step:last-child {
+      padding-bottom: 0;
+    }
+
+    .step-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(247, 147, 26, 0.15);
+      border: 1.5px solid var(--accent);
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-line {
+      width: 1.5px;
+      flex: 1;
+      background: var(--border);
+      margin-top: 8px;
+    }
+
+    .step:last-child .step-line {
+      display: none;
+    }
+
+    .step-content {
+      padding-top: 6px;
+    }
+
+    .step-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    /* CARDS */
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, transform 0.15s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    .card-body {
+      flex: 1;
+    }
+
+    .card-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 3px;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .card-bonus {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(0, 200, 150, 0.1);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(0, 200, 150, 0.2);
+    }
+
+    .card-bonus::before {
+      content: "✦";
+      font-size: 9px;
+    }
+
+    .card-arrow {
+      font-size: 1.2rem;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    .card:hover .card-arrow {
+      color: var(--accent);
+    }
+
+    /* FAQ */
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .faq-a {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: var(--muted);
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="badge">For Canadians · 100% Free to Start</div>
+    <h1>Crypto.<br><span>No jargon. No nonsense.</span></h1>
+    <p class="subtitle">A simple guide to get started with cryptocurrency in Canada — with trusted, regulated platforms and real sign-up bonuses.</p>
+    <div class="trust-note">All platforms are FINTRAC-registered and legally operating in Canada</div>
+  </header>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <div class="section-label">How it works</div>
+    <h2>3 steps to your first crypto</h2>
+    <p class="section-desc">You don't need to understand blockchain. You just need 10 minutes and a phone.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h3>Pick a platform below</h3>
+          <p>Choose any of the Canadian-regulated exchanges listed below. All of them are free to join.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h3>Verify your identity (KYC)</h3>
+          <p>Canadian law requires exchanges to verify who you are. It takes about 5 minutes — just a photo of your ID and a selfie.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h3>Make your first deposit and collect your bonus</h3>
+          <p>Deposit as little as $20 CAD and your welcome bonus is automatically credited to your account.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- PLATFORMS -->
+  <section>
+    <div class="section-label">Recommended platforms</div>
+    <h2>Sign up and get a bonus</h2>
+    <p class="section-desc">Use the links below — you and I both get a reward when you sign up and make your first trade or deposit.</p>
+
+    <div class="cards">
+
+      <a class="card" href="https://shakepay.me/r/RV6U7EG" target="_blank" rel="noopener">
+        <div class="card-icon" style="background: rgba(247,147,26,0.1);">🟠</div>
+        <div class="card-body">
+          <div class="card-name">Shakepay</div>
+          <div class="card-desc">The simplest way to buy Bitcoin in Canada. No trading experience needed. Great for beginners.</div>
+          <div class="card-bonus">$30 in Bitcoin when you sign up</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a class="card" href="https://proinvite.kraken.com/9f1e/6l5p5yu6" target="_blank" rel="noopener">
+        <div class="card-icon" style="background: rgba(112,87,255,0.1);">🐙</div>
+        <div class="card-body">
+          <div class="card-name">Kraken</div>
+          <div class="card-desc">One of the world's most trusted exchanges. 400+ cryptocurrencies. Great for those ready to explore beyond Bitcoin.</div>
+          <div class="card-bonus">Up to $75 CAD welcome bonus</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a class="card" href="https://coinbase.com/join/FBKDXHK?src=android-link" target="_blank" rel="noopener">
+        <div class="card-icon" style="background: rgba(22,118,255,0.1);">🔵</div>
+        <div class="card-body">
+          <div class="card-name">Coinbase</div>
+          <div class="card-desc">The most recognized name in crypto worldwide. Clean app, great for first-timers. Available across Canada.</div>
+          <div class="card-bonus">Bonus on your first purchase</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <a class="card" href="https://ref.ndax.io/NLZU/h5djb6aa" target="_blank" rel="noopener">
+        <div class="card-icon" style="background: rgba(0,200,150,0.1);">🇨🇦</div>
+        <div class="card-body">
+          <div class="card-name">NDAX</div>
+          <div class="card-desc">100% Canadian exchange. Low fees, easy to use, built specifically for Canadians by Canadians.</div>
+          <div class="card-bonus">$15 CAD for each verified user</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- FAQ -->
+  <section>
+    <div class="section-label">Common questions</div>
+    <h2>Is this safe?</h2>
+    <p class="section-desc">Fair question. Here are the most common ones.</p>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">Are these platforms legal in Canada?</div>
+        <div class="faq-a">Yes. All platforms listed here are registered with FINTRAC (Canada's financial intelligence agency) and regulated by Canadian securities commissions. They operate legally in all provinces.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How much money do I need to start?</div>
+        <div class="faq-a">Most platforms let you start with as little as $20–$50 CAD. You don't need to buy a whole Bitcoin — you can buy a fraction, like $25 worth.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Why should I use your referral link?</div>
+        <div class="faq-a">When you sign up through my link, you get a welcome bonus you wouldn't get by going directly. I also get a small reward. It costs you nothing extra — the platforms pay for it as a marketing expense.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Do I have to pay taxes on crypto in Canada?</div>
+        <div class="faq-a">Yes. The CRA (Canada Revenue Agency) considers crypto a taxable asset. If you sell at a profit, you'll owe capital gains tax. Keep records of your transactions. When in doubt, consult a tax professional.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Which platform should I choose?</div>
+        <div class="faq-a">If you're a complete beginner, start with Shakepay — it's the simplest. If you want more coins and features, go with Kraken or Coinbase. If you want a fully Canadian platform, NDAX is the one.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>This site contains referral links. When you sign up using these links, I may earn a small commission at no extra cost to you.</p>
+    <p style="margin-top:8px;">This is not financial advice. Crypto is a high-risk asset. Only invest what you can afford to lose.</p>
+    <p style="margin-top:8px; color: #555;">© 2026 · Crypto for Canadians</p>
+  </footer>
+
+</body>
+</html>
