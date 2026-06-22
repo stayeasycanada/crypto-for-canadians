@@ -106,11 +106,7 @@
       font-size: 0.95rem;
     }
 
-    .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    .steps { display: flex; flex-direction: column; gap: 0; }
 
     .step {
       display: flex;
@@ -151,7 +147,6 @@
     }
 
     .step:last-child .step-line { display: none; }
-
     .step-content { padding-top: 6px; }
 
     .step-content h3 {
@@ -161,22 +156,11 @@
       margin-bottom: 4px;
     }
 
-    .step-content p {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
+    .step-content p { font-size: 0.9rem; color: var(--muted); }
 
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-    }
+    .divider { border: none; border-top: 1px solid var(--border); }
 
-    /* CARDS */
-    .cards {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+    .cards { display: flex; flex-direction: column; gap: 16px; }
 
     .card {
       background: var(--surface);
@@ -196,17 +180,16 @@
       transform: translateY(-2px);
     }
 
-    /* LOGO — más grande */
     .card-logo {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       border-radius: 16px;
       background: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      padding: 10px;
+      padding: 8px;
       overflow: hidden;
     }
 
@@ -232,7 +215,6 @@
       margin-bottom: 12px;
     }
 
-    /* BONUS — más grande y visible */
     .card-bonus {
       display: inline-flex;
       align-items: center;
@@ -246,10 +228,7 @@
       border: 1px solid rgba(0, 200, 150, 0.25);
     }
 
-    .card-bonus::before {
-      content: "🎁";
-      font-size: 14px;
-    }
+    .card-bonus::before { content: "🎁"; font-size: 14px; }
 
     .card-arrow {
       font-size: 1.4rem;
@@ -259,7 +238,6 @@
 
     .card:hover .card-arrow { color: var(--accent); }
 
-    /* FAQ */
     .faq { display: flex; flex-direction: column; gap: 16px; }
 
     .faq-item {
@@ -276,11 +254,7 @@
       font-size: 0.95rem;
     }
 
-    .faq-a {
-      color: var(--muted);
-      font-size: 0.88rem;
-      line-height: 1.65;
-    }
+    .faq-a { color: var(--muted); font-size: 0.88rem; line-height: 1.65; }
 
     footer {
       border-top: 1px solid var(--border);
@@ -293,7 +267,7 @@
 
     @media (max-width: 500px) {
       .card { flex-wrap: wrap; }
-      .card-logo { width: 64px; height: 64px; }
+      .card-logo { width: 70px; height: 70px; }
     }
   </style>
 </head>
@@ -312,30 +286,21 @@
     <p class="section-desc">You don't need to understand blockchain. You just need 10 minutes and a phone.</p>
     <div class="steps">
       <div class="step">
-        <div class="step-left">
-          <div class="step-num">1</div>
-          <div class="step-line"></div>
-        </div>
+        <div class="step-left"><div class="step-num">1</div><div class="step-line"></div></div>
         <div class="step-content">
           <h3>Pick a platform below</h3>
           <p>Choose any of the Canadian-regulated exchanges listed below. All of them are free to join.</p>
         </div>
       </div>
       <div class="step">
-        <div class="step-left">
-          <div class="step-num">2</div>
-          <div class="step-line"></div>
-        </div>
+        <div class="step-left"><div class="step-num">2</div><div class="step-line"></div></div>
         <div class="step-content">
           <h3>Verify your identity (KYC)</h3>
           <p>Canadian law requires exchanges to verify who you are. It takes about 5 minutes — just a photo of your ID and a selfie.</p>
         </div>
       </div>
       <div class="step">
-        <div class="step-left">
-          <div class="step-num">3</div>
-          <div class="step-line"></div>
-        </div>
+        <div class="step-left"><div class="step-num">3</div><div class="step-line"></div></div>
         <div class="step-content">
           <h3>Make your first deposit and collect your bonus</h3>
           <p>Deposit as little as $20 CAD and your welcome bonus is automatically credited to your account.</p>
@@ -353,39 +318,10 @@
 
     <div class="cards">
 
-      <a class="card" href="https://shakepay.me/r/RV6U7EG" target="_blank" rel="noopener">
-        <div class="card-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Shakepay_logo.svg/512px-Shakepay_logo.svg.png"
-               onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:2rem\'>🟠</span>'"
-               alt="Shakepay logo"/>
-        </div>
-        <div class="card-body">
-          <div class="card-name">Shakepay</div>
-          <div class="card-desc">The simplest way to buy Bitcoin in Canada. No trading experience needed. Great for beginners.</div>
-          <div class="card-bonus">$30 in Bitcoin when you sign up</div>
-        </div>
-        <div class="card-arrow">→</div>
-      </a>
-
-      <a class="card" href="https://proinvite.kraken.com/9f1e/6l5p5yu6" target="_blank" rel="noopener">
-        <div class="card-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kraken_logo.svg/512px-Kraken_logo.svg.png"
-               onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:2rem\'>🐙</span>'"
-               alt="Kraken logo"/>
-        </div>
-        <div class="card-body">
-          <div class="card-name">Kraken</div>
-          <div class="card-desc">One of the world's most trusted exchanges. 400+ cryptocurrencies. Great for those ready to explore beyond Bitcoin.</div>
-          <div class="card-bonus">Up to $75 CAD welcome bonus</div>
-        </div>
-        <div class="card-arrow">→</div>
-      </a>
-
+      <!-- COINBASE — primero -->
       <a class="card" href="https://coinbase.com/join/FBKDXHK?src=android-link" target="_blank" rel="noopener">
-        <div class="card-logo" style="background: #0052FF;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/24px-Coinbase.svg/512px-24px-Coinbase.svg.png"
-               onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:2rem; color:white\'>C</span>'"
-               alt="Coinbase logo"/>
+        <div class="card-logo">
+          <img src="coinbase.png" alt="Coinbase logo"/>
         </div>
         <div class="card-body">
           <div class="card-name">Coinbase</div>
@@ -395,11 +331,36 @@
         <div class="card-arrow">→</div>
       </a>
 
+      <!-- SHAKEPAY -->
+      <a class="card" href="https://shakepay.me/r/RV6U7EG" target="_blank" rel="noopener">
+        <div class="card-logo">
+          <img src="shakepay.png" alt="Shakepay logo"/>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Shakepay</div>
+          <div class="card-desc">The simplest way to buy Bitcoin in Canada. No trading experience needed. Great for beginners.</div>
+          <div class="card-bonus">$30 in Bitcoin when you sign up</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <!-- KRAKEN -->
+      <a class="card" href="https://proinvite.kraken.com/9f1e/6l5p5yu6" target="_blank" rel="noopener">
+        <div class="card-logo">
+          <img src="kraken.png" alt="Kraken logo"/>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Kraken</div>
+          <div class="card-desc">One of the world's most trusted exchanges. 400+ cryptocurrencies. Great for those ready to explore beyond Bitcoin.</div>
+          <div class="card-bonus">Up to $75 CAD welcome bonus</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <!-- NDAX -->
       <a class="card" href="https://ref.ndax.io/NLZU/h5djb6aa" target="_blank" rel="noopener">
-        <div class="card-logo" style="background: #002B5C;">
-          <img src="https://ndax.io/assets/images/ndax-logo-white.png"
-               onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:1.4rem; font-weight:900; color:white\'>NDAX</span>'"
-               alt="NDAX logo"/>
+        <div class="card-logo">
+          <img src="ndax.png" alt="NDAX logo"/>
         </div>
         <div class="card-body">
           <div class="card-name">NDAX</div>
