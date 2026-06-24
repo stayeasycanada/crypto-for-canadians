@@ -20,17 +20,12 @@
     }
     body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; }
 
-    /* HEADER */
     header { text-align: center; padding: 72px 24px 56px; border-bottom: 1px solid var(--border); }
     .badge { display: inline-block; background: rgba(247,147,26,0.12); color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 24px; border: 1px solid rgba(247,147,26,0.25); }
     h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
     h1 span { color: var(--accent); }
-    .subtitle { font-size: 1.1rem; color: var(--muted); max-width: 520px; margin: 0 auto 28px; }
-    .trust-note { font-size: 13px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 6px; }
-    .trust-note::before { content: "🇨🇦"; }
 
-    /* SECTIONS */
-    section { max-width: 800px; margin: 0 auto; padding: 64px 24px; }
+    section { max-width: 860px; margin: 0 auto; padding: 64px 24px; }
     .section-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
     h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
     .section-desc { color: var(--muted); margin-bottom: 40px; font-size: 0.95rem; }
@@ -49,6 +44,10 @@
     .card-bonus { background: rgba(255,255,255,0.18); border-radius: 20px; padding: 7px 16px; display: inline-flex; align-items: center; gap: 7px; width: fit-content; }
     .card-bonus span { font-size: 14px; font-weight: 600; color: white; }
 
+    /* SUBTITLE BANNER */
+    .subtitle-banner { background: var(--surface2); border: 1px solid var(--border); border-radius: 14px; padding: 24px 32px; text-align: center; margin-bottom: 0; }
+    .subtitle-banner p { font-size: 1rem; color: var(--muted); line-height: 1.7; }
+
     /* HOW IT WORKS */
     .steps { display: flex; flex-direction: column; }
     .step { display: flex; gap: 20px; padding-bottom: 36px; }
@@ -61,7 +60,7 @@
     .step-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: 6px; }
     .step-content p { font-size: 0.9rem; color: var(--muted); }
 
-    /* FAQ ACCORDION */
+    /* FAQ */
     .faq { display: flex; flex-direction: column; gap: 10px; }
     .faq-item { background: var(--surface2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
     .faq-question { width: 100%; background: none; border: none; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; text-align: left; }
@@ -75,6 +74,8 @@
 
     /* FOOTER */
     footer { border-top: 1px solid var(--border); text-align: center; padding: 36px 24px; color: var(--muted); font-size: 0.8rem; line-height: 1.9; }
+    .trust-note { font-size: 13px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 12px; }
+    .trust-note::before { content: "🇨🇦"; }
 
     @media (max-width: 600px) {
       .cards-grid { grid-template-columns: 1fr; }
@@ -85,37 +86,41 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <div class="badge">For Canadians · 100% Free to Start</div>
+    <div class="badge">Crypto Bonuses for Canadians · 100% Free to Start</div>
     <h1>Crypto.<br><span>No jargon. No nonsense.</span></h1>
-    <p class="subtitle">A simple guide to get started with cryptocurrency in Canada — trusted platforms, real bonuses, zero experience needed.</p>
-    <div class="trust-note">All platforms are FINTRAC-registered and legally operating in Canada</div>
   </header>
 
+  <!-- PLATFORMS -->
   <section>
     <div class="section-label">Recommended platforms</div>
     <h2>Sign up and get a bonus</h2>
     <p class="section-desc">Use the links below — you get a welcome bonus and I get a small commission. Costs you nothing extra.</p>
+
     <div class="cards-grid">
 
+      <!-- COINBASE -->
       <a class="platform-card" href="https://coinbase.com/join/FBKDXHK?src=android-link" target="_blank" rel="noopener" style="background:#0052FF;">
         <div class="card-header">
           <div class="card-logo-box"><img src="coinbase.png" alt="Coinbase"/></div>
           <div><p class="card-title">Coinbase</p><p class="card-tagline">Most recognized worldwide</p></div>
         </div>
         <p class="card-desc">The most trusted name in crypto globally. Clean app, easy to use, available across Canada.</p>
-        <div class="card-bonus">🎁 <span>Bonus on your first purchase</span></div>
+        <div class="card-bonus">🎁 <span>$30 CAD on your first purchase</span></div>
       </a>
 
-      <a class="platform-card" href="https://shakepay.me/r/RV6U7EG" target="_blank" rel="noopener" style="background:#1B9DD9;">
+      <!-- CRYPTO.COM -->
+      <a class="platform-card" href="https://crypto.com/app/fdf6hh8ufr" target="_blank" rel="noopener" style="background:#1A2B6B;">
         <div class="card-header">
-          <div class="card-logo-box"><img src="shakepay.png" alt="Shakepay"/></div>
-          <div><p class="card-title">Shakepay</p><p class="card-tagline">Simplest way to start</p></div>
+          <div class="card-logo-box"><img src="cryptodotcom.png" alt="Crypto.com"/></div>
+          <div><p class="card-title">Crypto.com</p><p class="card-tagline">All-in-one crypto platform</p></div>
         </div>
-        <p class="card-desc">The easiest way to buy Bitcoin in Canada. No trading experience needed. Perfect for beginners.</p>
-        <div class="card-bonus">🎁 <span>$30 in Bitcoin when you join</span></div>
+        <p class="card-desc">One of the world's largest crypto platforms. Great app, crypto Visa card, and hundreds of coins available.</p>
+        <div class="card-bonus">🎁 <span>$50 CAD welcome bonus</span></div>
       </a>
 
+      <!-- KRAKEN -->
       <a class="platform-card" href="https://proinvite.kraken.com/9f1e/6l5p5yu6" target="_blank" rel="noopener" style="background:#5741D9;">
         <div class="card-header">
           <div class="card-logo-box"><img src="kraken.png" alt="Kraken"/></div>
@@ -125,6 +130,7 @@
         <div class="card-bonus">🎁 <span>Up to $75 CAD welcome bonus</span></div>
       </a>
 
+      <!-- NDAX -->
       <a class="platform-card" href="https://ref.ndax.io/NLZU/h5djb6aa" target="_blank" rel="noopener" style="background:#1A1464;">
         <div class="card-header">
           <div class="card-logo-box"><img src="ndax.png" alt="NDAX"/></div>
@@ -134,11 +140,41 @@
         <div class="card-bonus">🎁 <span>$15 CAD per verified user</span></div>
       </a>
 
+      <!-- SHAKEPAY -->
+      <a class="platform-card" href="https://shakepay.me/r/RV6U7EG" target="_blank" rel="noopener" style="background:#1B9DD9;">
+        <div class="card-header">
+          <div class="card-logo-box"><img src="shakepay.png" alt="Shakepay"/></div>
+          <div><p class="card-title">Shakepay</p><p class="card-tagline">Simplest way to start</p></div>
+        </div>
+        <p class="card-desc">The easiest way to buy Bitcoin in Canada. No trading experience needed. Perfect for beginners.</p>
+        <div class="card-bonus">🎁 <span>$30 in Bitcoin when you join</span></div>
+      </a>
+
+      <!-- BTCC -->
+      <a class="platform-card" href="https://btcc.com/invite/Uflbmy2" target="_blank" rel="noopener" style="background:#0E7EC0;">
+        <div class="card-header">
+          <div class="card-logo-box"><img src="btcc.png" alt="BTCC"/></div>
+          <div><p class="card-title">BTCC</p><p class="card-tagline">Crypto futures & spot trading</p></div>
+        </div>
+        <p class="card-desc">One of the longest-running crypto exchanges in the world. Great for trading and earning rewards.</p>
+        <div class="card-bonus">🎁 <span>$10 CAD welcome bonus</span></div>
+      </a>
+
     </div>
   </section>
 
   <hr class="divider"/>
 
+  <!-- SUBTITLE BANNER -->
+  <section style="padding-top: 48px; padding-bottom: 48px;">
+    <div class="subtitle-banner">
+      <p>A simple guide to get started with cryptocurrency in Canada — trusted platforms, real bonuses, zero experience needed.</p>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- HOW IT WORKS -->
   <section>
     <div class="section-label">How it works</div>
     <h2>3 steps to your first crypto</h2>
@@ -170,6 +206,7 @@
 
   <hr class="divider"/>
 
+  <!-- FAQ -->
   <section>
     <div class="section-label">FAQ</div>
     <h2>Frequently asked questions</h2>
@@ -213,7 +250,7 @@
           <span>Which platform should I choose?</span>
           <div class="faq-icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></div>
         </button>
-        <div class="faq-answer"><p>If you're a complete beginner, start with Shakepay — it's the simplest. If you want more coins and features, go with Kraken or Coinbase. If you want a fully Canadian platform, NDAX is the one.</p></div>
+        <div class="faq-answer"><p>If you're a complete beginner, start with Shakepay or Coinbase — they're the simplest. If you want more coins and features, go with Kraken or Crypto.com. If you want a fully Canadian platform, NDAX is the one.</p></div>
       </div>
 
       <div class="faq-item">
@@ -227,7 +264,9 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
+    <div class="trust-note">All platforms are FINTRAC-registered and legally operating in Canada</div>
     <p>This site contains referral links. When you sign up using these links, I may earn a small commission at no extra cost to you.</p>
     <p style="margin-top:6px;">This is not financial advice. Crypto is a high-risk asset. Only invest what you can afford to lose.</p>
     <p style="margin-top:10px; color:#2a4a7a;">© 2026 · Crypto for Canadians</p>
