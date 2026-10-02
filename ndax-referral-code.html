@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  TEMPLATE — one page per platform. This is the worked example for NDAX.
+  To make the next one (e.g. Shakepay), copy this folder and replace:
+    1. Every instance of "NDAX" / "ndax"  -> the new platform
+    2. <title>, <meta description>, <h1>  -> the new keyword
+    3. The <link rel="canonical"> and all og:url / @id URLs
+    4. The referral link in the two CTA buttons
+    5. The bonus amount, the fee numbers, and the qualification steps
+    6. The JSON-LD at the bottom (name, description, url, FAQ questions)
+  Then add the new URL to sitemap.xml.
+  Folder name = the URL, so keep it short and keyword-exact:
+    /ndax-referral-code/  ->  .../crypto-for-canadians/ndax-referral-code/
+  ============================================================================
+-->
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>NDAX Referral Code 2026 — $15 Bonus &amp; Honest Review (Canada)</title>
+  <meta name="description" content="NDAX referral code for Canadians: get a $15 CAD bonus after verification. Real fees (0.2%), deposit options, how long verification takes, and whether NDAX is worth it versus Shakepay."/>
+  <link rel="canonical" href="https://stayeasycanada.github.io/crypto-for-canadians/ndax-referral-code.html"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <meta name="theme-color" content="#0f1f3d"/>
+
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Crypto for Canadians"/>
+  <meta property="og:locale" content="en_CA"/>
+  <meta property="og:title" content="NDAX Referral Code 2026 — $15 Bonus &amp; Honest Review"/>
+  <meta property="og:description" content="Get a $15 CAD bonus on NDAX, Canada's lowest-fee crypto exchange. Real fees, verification times, and how it compares to Shakepay."/>
+  <meta property="og:url" content="https://stayeasycanada.github.io/crypto-for-canadians/ndax-referral-code.html"/>
+  <meta property="og:image" content="https://stayeasycanada.github.io/crypto-for-canadians/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1f3d; --surface2: #1a2d52; --border: #1e3460;
+      --text: #e2e8f8; --muted: #7d9bc4; --accent: #f7931a; --green: #00c896; --white: #fff;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; }
+    .wrap { max-width: 740px; margin: 0 auto; padding: 32px 24px 72px; }
+
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 4.4vw, 2.5rem); font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 14px; }
+    .meta-line { font-size: 13px; color: var(--green); font-weight: 600; margin-bottom: 32px; }
+    h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.45rem; font-weight: 700; color: var(--white); margin: 44px 0 14px; }
+    h3 { font-size: 1.05rem; font-weight: 600; color: var(--white); margin: 28px 0 8px; }
+    p { color: var(--muted); margin-bottom: 16px; }
+    p strong, li strong { color: var(--text); font-weight: 600; }
+    a { color: var(--accent); }
+    ul, ol { color: var(--muted); margin: 0 0 18px 22px; }
+    li { margin-bottom: 8px; }
+
+    /* CTA box — repeat near the top and again at the bottom */
+    .cta { background: linear-gradient(135deg, rgba(247,147,26,0.1), rgba(0,200,150,0.07)); border: 1px solid rgba(247,147,26,0.3); border-radius: 16px; padding: 26px 28px; margin: 28px 0; text-align: center; }
+    .cta .amount { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--accent); display: block; margin-bottom: 6px; }
+    .cta p { font-size: 0.9rem; margin-bottom: 18px; }
+    .cta-btn { display: inline-block; background: var(--accent); color: #0f1f3d; font-weight: 700; font-size: 0.95rem; text-decoration: none; padding: 14px 30px; border-radius: 10px; transition: transform 0.15s; }
+    .cta-btn:hover { transform: translateY(-2px); }
+    .cta .fine { font-size: 12px; color: var(--muted); margin: 14px 0 0; }
+
+    /* Verdict / summary box */
+    .verdict { background: var(--surface2); border: 1px solid var(--border); border-left: 3px solid var(--green); border-radius: 12px; padding: 22px 26px; margin: 28px 0; }
+    .verdict h3 { margin-top: 0; }
+    .verdict p:last-child { margin-bottom: 0; }
+
+    /* Comparison table */
+    .table-scroll { overflow-x: auto; margin: 20px 0 24px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 440px; }
+    th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+    th { color: var(--white); font-weight: 600; background: var(--surface2); white-space: nowrap; }
+    td { color: var(--muted); }
+    td strong { color: var(--text); }
+
+    footer { border-top: 1px solid var(--border); margin-top: 56px; padding-top: 28px; font-size: 0.8rem; color: var(--muted); line-height: 1.8; }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="breadcrumb">
+    <a href="/crypto-for-canadians/">Crypto for Canadians</a> › NDAX referral code
+  </nav>
+
+  <h1>NDAX Referral Code 2026: $15 Bonus and an Honest Review</h1>
+  <p class="meta-line">✓ Bonus verified October 2026 · Canada only</p>
+
+  <p>NDAX is a Calgary-based crypto exchange and one of the few that is entirely Canadian-owned. Its pitch is simple: trading fees of <strong>0.2%</strong>, which is meaningfully cheaper than the beginner-friendly apps most Canadians start on. Sign up through a referral link and you get a <strong>$15 CAD bonus</strong> once your identity is verified.</p>
+
+  <p>This page covers what the bonus actually requires, what NDAX costs to use, and the cases where you would be better off somewhere else. I opened an account myself, so the verification timing below is what I experienced rather than what the marketing page claims.</p>
+
+  <div class="cta">
+    <span class="amount">$15 CAD</span>
+    <p>Credited to your CAD wallet after identity verification. No minimum deposit required to qualify.</p>
+    <!-- REPLACE with your referral link when copying this template -->
+    <a class="cta-btn" href="https://ref.ndax.io/NLZU/h5djb6aa" target="_blank" rel="sponsored noopener">Claim the NDAX bonus →</a>
+    <p class="fine">Referral link — I earn a commission at no cost to you.</p>
+  </div>
+
+  <h2>How to claim the NDAX bonus</h2>
+  <ol>
+    <li><strong>Sign up through a referral link.</strong> The bonus does not exist if you go to ndax.io directly — the promotion is tied to the referral, so there is no version of this where skipping the link gets you a better deal.</li>
+    <li><strong>Complete identity verification.</strong> You need a government photo ID (driver's licence or passport) and a selfie. NDAX is FINTRAC-registered, so this is a legal requirement, not an optional step.</li>
+    <li><strong>Wait for approval.</strong> Mine cleared in a few hours on a weekday. NDAX says up to one business day, and it can be slower if your ID photo is blurry.</li>
+    <li><strong>The $15 lands in your CAD wallet.</strong> You can withdraw it or use it to buy crypto. Unlike several competitors, NDAX does not require a minimum purchase first.</li>
+  </ol>
+
+  <div class="verdict">
+    <h3>The short verdict</h3>
+    <p><strong>Get NDAX if</strong> you care about fees, plan to buy more than a few hundred dollars of crypto, and are comfortable with an interface that shows you an actual order book.</p>
+    <p><strong>Skip it if</strong> this is your very first crypto purchase and you want something that feels like a banking app. Shakepay is a gentler start, even though it costs more per trade.</p>
+  </div>
+
+  <h2>NDAX fees, honestly</h2>
+  <p>Fees are where NDAX earns its reputation, and it is worth understanding why the comparison is not as simple as the headline number suggests.</p>
+  <ul>
+    <li><strong>Trading: 0.2%</strong> per trade, both maker and taker. On a $1,000 buy that is $2.</li>
+    <li><strong>CAD deposits: free</strong> by Interac e-Transfer, bank wire or EFT.</li>
+    <li><strong>CAD withdrawals: $4.99</strong> flat by e-Transfer. Worth knowing before you plan to move money in and out often.</li>
+    <li><strong>Crypto withdrawals:</strong> network fees, which vary by coin and by how busy the network is.</li>
+  </ul>
+  <p>The number to compare against is not another exchange's stated commission but its <em>spread</em>. Apps marketed as commission-free generally make their money by quoting you a slightly worse price than the market one — often 1% to 2.5% in effect. That is why a 0.2% explicit fee usually works out cheaper overall, and why the gap widens the more you buy.</p>
+
+  <h2>NDAX vs Shakepay vs Wealthsimple</h2>
+  <p>These are the three platforms most Canadian beginners end up choosing between, and they are genuinely built for different people.</p>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th>&nbsp;</th><th>NDAX</th><th>Shakepay</th><th>Wealthsimple</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Signup bonus</strong></td><td>$15 CAD</td><td>$30 in BTC</td><td>$25 CAD</td></tr>
+        <tr><td><strong>Trading cost</strong></td><td>0.2% explicit</td><td>Spread (~1%+)</td><td>Spread (~2%)</td></tr>
+        <tr><td><strong>Best for</strong></td><td>Lowest fees</td><td>First-ever purchase</td><td>Crypto + stocks in a TFSA</td></tr>
+        <tr><td><strong>Learning curve</strong></td><td>Moderate</td><td>None</td><td>Low</td></tr>
+        <tr><td><strong>Canadian-owned</strong></td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td><strong>Holds stocks too</strong></td><td>No</td><td>No</td><td>Yes</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>If you are only going to open one account, the deciding question is whether you want stocks in the same place. If you do, Wealthsimple wins despite the higher crypto cost, because having everything inside a TFSA is worth more than the fee difference on a small balance. If you only want crypto and intend to keep buying, NDAX is the cheaper home for it.</p>
+  <p>There is also nothing stopping you from opening more than one — see <a href="/crypto-for-canadians/">the full list of Canadian crypto bonuses</a> for every promotion currently available and what each one requires.</p>
+
+  <h2>Is NDAX safe?</h2>
+  <p>NDAX is registered with FINTRAC as a money services business and with Canadian securities regulators, holds client CAD at a Canadian bank, and keeps the majority of crypto in cold storage. It has operated since 2018 without a publicly reported breach.</p>
+  <p>Two things to be clear about, though. Crypto held on any exchange is <strong>not covered by CDIC insurance</strong> the way cash in a chequing account is — if the exchange fails, you are a creditor. And the regulatory standing of the platform says nothing about the asset: Bitcoin has repeatedly lost more than half its value within a year. Those are separate risks and the first one being handled does not help with the second.</p>
+
+  <h2>Do I pay tax on the NDAX bonus?</h2>
+  <p>Probably, yes. The CRA generally treats a referral or signup bonus as income in the year you receive it, and any later gain when you sell crypto as a capital gain, where half the gain is taxable. On $15 the amount at stake is trivial, but the record-keeping habit matters once you are trading real sums. Keep your transaction history and speak to an accountant — this page is not tax advice.</p>
+
+  <div class="cta">
+    <span class="amount">$15 CAD</span>
+    <p>Ready to open the account? The bonus is credited after verification, with no minimum deposit.</p>
+    <a class="cta-btn" href="https://ref.ndax.io/NLZU/h5djb6aa" target="_blank" rel="sponsored noopener">Sign up for NDAX →</a>
+    <p class="fine">Referral link — I earn a commission at no cost to you.</p>
+  </div>
+
+  <footer>
+    <p><strong>Affiliate disclosure:</strong> this page contains referral links. If you sign up through one, I may earn a commission from the platform at no extra cost to you.</p>
+    <p>Not financial, investment or tax advice. Crypto is high-risk — only invest what you can afford to lose.</p>
+    <p style="margin-top:10px;"><a href="/crypto-for-canadians/">← All Canadian crypto signup bonuses</a></p>
+  </footer>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Crypto for Canadians", "item": "https://stayeasycanada.github.io/crypto-for-canadians/" },
+        { "@type": "ListItem", "position": 2, "name": "NDAX referral code" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "NDAX Referral Code 2026: $15 Bonus and an Honest Review",
+      "description": "NDAX referral code for Canadians: $15 CAD bonus after verification, real fees, and how NDAX compares to Shakepay and Wealthsimple.",
+      "mainEntityOfPage": "https://stayeasycanada.github.io/crypto-for-canadians/ndax-referral-code.html",
+      "dateModified": "2026-10-02",
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I get the NDAX signup bonus?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sign up through a referral link and complete identity verification with a government photo ID. The $15 CAD bonus is credited to your CAD wallet, with no minimum deposit required. The bonus is not available if you sign up directly at ndax.io." }
+        },
+        {
+          "@type": "Question",
+          "name": "What fees does NDAX charge?",
+          "acceptedAnswer": { "@type": "Answer", "text": "NDAX charges 0.2% per trade for both maker and taker orders. CAD deposits are free by Interac e-Transfer, wire or EFT. CAD withdrawals cost $4.99. Crypto withdrawals pay network fees that vary by coin." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is NDAX safe to use in Canada?",
+          "acceptedAnswer": { "@type": "Answer", "text": "NDAX is registered with FINTRAC and Canadian securities regulators, holds client CAD at a Canadian bank, and keeps most crypto in cold storage. However, crypto on any exchange is not covered by CDIC insurance, and the underlying assets remain highly volatile." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>
