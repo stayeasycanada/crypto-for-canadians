@@ -1,0 +1,55 @@
+/* Shared styles for the platform review pages. Edit here once, applies to all. */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0f1f3d; --surface2: #1a2d52; --border: #1e3460;
+  --text: #e2e8f8; --muted: #7d9bc4; --accent: #f7931a; --green: #00c896; --white: #fff;
+}
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; }
+.wrap { max-width: 740px; margin: 0 auto; padding: 28px 24px 72px; }
+
+.breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 26px; }
+.breadcrumb a { color: var(--accent); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.75rem, 4.3vw, 2.4rem); font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 12px; }
+.meta-line { font-size: 13px; color: var(--green); font-weight: 600; margin-bottom: 30px; }
+h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--white); margin: 44px 0 14px; }
+h3 { font-size: 1.03rem; font-weight: 600; color: var(--white); margin: 26px 0 8px; }
+p { color: var(--muted); margin-bottom: 16px; }
+p strong, li strong, td strong { color: var(--text); font-weight: 600; }
+a { color: var(--accent); }
+ul, ol { color: var(--muted); margin: 0 0 18px 22px; }
+li { margin-bottom: 8px; }
+em { color: var(--text); font-style: italic; }
+
+.cta { background: linear-gradient(135deg, rgba(247,147,26,0.1), rgba(0,200,150,0.07)); border: 1px solid rgba(247,147,26,0.3); border-radius: 16px; padding: 26px 28px; margin: 28px 0; text-align: center; }
+.cta .amount { font-family: 'Space Grotesk', sans-serif; font-size: 1.85rem; font-weight: 700; color: var(--accent); display: block; margin-bottom: 6px; }
+.cta p { font-size: 0.9rem; margin-bottom: 18px; }
+.cta-btn { display: inline-block; background: var(--accent); color: #0f1f3d; font-weight: 700; font-size: 0.95rem; text-decoration: none; padding: 14px 30px; border-radius: 10px; transition: transform 0.15s; }
+.cta-btn:hover { transform: translateY(-2px); }
+.cta .fine { font-size: 12px; color: var(--muted); margin: 14px 0 0; }
+
+.verdict { background: var(--surface2); border: 1px solid var(--border); border-left: 3px solid var(--green); border-radius: 12px; padding: 22px 26px; margin: 28px 0; }
+.verdict h3 { margin-top: 0; }
+.verdict p:last-child { margin-bottom: 0; }
+
+.warn { background: rgba(247,147,26,0.07); border: 1px solid rgba(247,147,26,0.28); border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
+.warn p:last-child { margin-bottom: 0; }
+
+.table-scroll { overflow-x: auto; margin: 20px 0 24px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.87rem; min-width: 440px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+th { color: var(--white); font-weight: 600; background: var(--surface2); white-space: nowrap; }
+td { color: var(--muted); }
+
+.related { background: var(--surface2); border: 1px solid var(--border); border-radius: 14px; padding: 22px 26px; margin-top: 40px; }
+.related h3 { margin-top: 0; }
+.related ul { margin-bottom: 0; }
+
+footer { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 26px; font-size: 0.8rem; color: var(--muted); line-height: 1.8; }
+footer a { color: var(--accent); }
+
+@media (max-width: 600px) {
+  .wrap { padding: 22px 18px 56px; }
+  .cta, .verdict, .warn, .related { padding: 20px; }
+}

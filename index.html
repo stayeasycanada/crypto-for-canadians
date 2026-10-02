@@ -79,6 +79,17 @@
     .card-howto { font-size: 12px; color: rgba(255,255,255,0.62); line-height: 1.55; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 11px; }
     .card-howto strong { color: rgba(255,255,255,0.85); font-weight: 600; }
 
+    /* CARD ACTIONS — primary referral CTA + internal link to the full review */
+    .card-actions { display: flex; gap: 10px; margin-top: auto; padding-top: 4px; flex-wrap: wrap; }
+    .card-cta { flex: 1 1 auto; min-width: 150px; text-align: center; background: rgba(255,255,255,0.95); color: #10203f; font-weight: 700; font-size: 13.5px; text-decoration: none; padding: 12px 18px; border-radius: 10px; transition: transform 0.15s; }
+    .card-cta:hover { transform: translateY(-1px); background: #fff; }
+    .card-review { text-align: center; color: rgba(255,255,255,0.88); font-size: 13px; font-weight: 600; text-decoration: none; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.3); border-radius: 10px; transition: background 0.15s; }
+    .card-review:hover { background: rgba(255,255,255,0.12); }
+    .trading-card .card-cta { background: var(--green); color: #0a2219; }
+    .trading-card .card-cta:hover { background: #19dba9; }
+    .trading-card .card-review { color: var(--muted); border-color: var(--border); }
+    .trading-card .card-review:hover { background: rgba(255,255,255,0.05); color: var(--text); }
+
     /* TRADING DIVIDER */
     .trading-divider { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; margin-top: 48px; }
     .trading-divider::before, .trading-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
@@ -167,15 +178,19 @@
 
     <div class="cards-grid">
 
-      <a class="platform-card" href="https://shakepay.me/r/RV6U7EG" target="_blank" rel="sponsored noopener" style="background:#1B9DD9;">
+      <div class="platform-card" style="background:#1B9DD9;">
         <div class="card-header">
           <div class="card-logo-box"><img src="shakepay.png" alt="Shakepay logo" loading="lazy"/></div>
           <div><p class="card-title">Shakepay</p><p class="card-tagline">Easiest for complete beginners</p></div>
         </div>
-        <p class="card-desc">The simplest way to buy Bitcoin in Canada. No trading screens, no order books — just buy and hold. Free Interac e-Transfer deposits and withdrawals.</p>
+        <p class="card-desc">The simplest way to buy Bitcoin in Canada. No trading screens, no order books — just buy and hold. Free Interac e-Transfer deposits and withdrawals. Bitcoin and Ethereum only.</p>
         <div class="card-bonus">🎁 <span>$30 in Bitcoin when you join</span></div>
         <p class="card-howto"><strong>To qualify:</strong> sign up with the link, verify your ID, then buy or sell at least $100 CAD of crypto. Bonus pays out in Bitcoin.</p>
-      </a>
+        <div class="card-actions">
+          <a class="card-cta" href="https://shakepay.me/r/RV6U7EG" target="_blank" rel="sponsored noopener">Get $30 →</a>
+          <a class="card-review" href="shakepay-referral-code.html">Full review</a>
+        </div>
+      </div>
 
       <a class="platform-card" href="https://coinbase.com/join/FBKDXHK?src=android-link" target="_blank" rel="sponsored noopener" style="background:#0052FF;">
         <div class="card-header">
@@ -207,15 +222,19 @@
         <p class="card-howto"><strong>To qualify:</strong> the bonus scales with how much you trade in your first 30 days. Verify your account first, then fund it.</p>
       </a>
 
-      <a class="platform-card" href="https://ref.ndax.io/NLZU/h5djb6aa" target="_blank" rel="sponsored noopener" style="background:#1A1464;">
+      <div class="platform-card" style="background:#1A1464;">
         <div class="card-header">
           <div class="card-logo-box"><img src="ndax.png" alt="NDAX logo" loading="lazy"/></div>
           <div><p class="card-title">NDAX</p><p class="card-tagline">100% Canadian-owned exchange</p></div>
         </div>
         <p class="card-desc">Built in Calgary specifically for Canadians. Among the lowest trading fees in Canada (0.2%), free CAD deposits, and registered with Canadian securities regulators.</p>
         <div class="card-bonus">🎁 <span>$15 CAD per verified user</span></div>
-        <p class="card-howto"><strong>To qualify:</strong> sign up through the link and complete full identity verification. Bonus credits to your CAD wallet.</p>
-      </a>
+        <p class="card-howto"><strong>To qualify:</strong> verification alone — no deposit needed. The only bonus here with no minimum.</p>
+        <div class="card-actions">
+          <a class="card-cta" href="https://ref.ndax.io/NLZU/h5djb6aa" target="_blank" rel="sponsored noopener">Get $15 →</a>
+          <a class="card-review" href="ndax-referral-code.html">Full review</a>
+        </div>
+      </div>
 
       <a class="platform-card" href="https://btcc.com/invite/Uflbmy2" target="_blank" rel="sponsored noopener" style="background:#0E7EC0;">
         <div class="card-header">
@@ -236,7 +255,7 @@
 
     <div class="cards-grid">
 
-      <a class="trading-card ws" href="https://www.wealthsimple.com/invite/3MYUPG" target="_blank" rel="sponsored noopener">
+      <div class="trading-card ws">
         <div class="card-header">
           <div class="card-logo-box" style="background:#f0f0f0;">
             <img src="wealthsimple.png" alt="Wealthsimple logo" loading="lazy"/>
@@ -246,12 +265,16 @@
             <p class="card-tagline" style="color:var(--muted);">Canada's most popular investing app</p>
           </div>
         </div>
-        <p class="card-desc" style="color:var(--muted);">Buy stocks, ETFs and crypto commission-free, with TFSA, RRSP and FHSA accounts all supported. The easiest starting point for a Canadian who has never invested before. Use code <strong style="color:var(--white);">3MYUPG</strong> at sign up.</p>
+        <p class="card-desc" style="color:var(--muted);">Commission-free stocks and ETFs in a TFSA, RRSP or FHSA — the easiest starting point for a Canadian who has never invested before. It also offers crypto, but at 2% and only in a non-registered account. Use code <strong style="color:var(--white);">3MYUPG</strong> at sign up.</p>
         <div class="trading-bonus">🎁 <span>$25 CAD when you fund any account</span></div>
-        <p class="card-howto"><strong>To qualify:</strong> open any account with the code and deposit at least $1. Bonus is cash, deposited straight into your account.</p>
-      </a>
+        <p class="card-howto"><strong>To qualify:</strong> open any account with the code and deposit at least $1. Lowest bar of any bonus here.</p>
+        <div class="card-actions">
+          <a class="card-cta" href="https://www.wealthsimple.com/invite/3MYUPG" target="_blank" rel="sponsored noopener">Get $25 →</a>
+          <a class="card-review" href="wealthsimple-referral-code.html">Full review</a>
+        </div>
+      </div>
 
-      <a class="trading-card moo" href="https://www.moomoo.com/ca/events/referral?global_content=%7B%22promote_id%22%3A14334%2C%22sub_promote_id%22%3A1%2C%22invite%22%3A76715117%7D" target="_blank" rel="sponsored noopener">
+      <div class="trading-card moo">
         <div class="card-header">
           <div class="card-logo-box" style="background:#ffffff;">
             <img src="moomoo.png" alt="Moomoo logo" loading="lazy"/>
@@ -261,10 +284,14 @@
             <p class="card-tagline" style="color:var(--muted);">Pro-level tools, beginner pricing</p>
           </div>
         </div>
-        <p class="card-desc" style="color:var(--muted);">Advanced trading platform with Level 2 market data, real-time charts and $0 currency conversion on US stocks — which saves real money if you buy American ETFs. TFSA and RRSP supported.</p>
+        <p class="card-desc" style="color:var(--muted);">Advanced platform with free Level 2 market data and charting that costs $30 a month elsewhere. $0 on US stocks, about $1.50 on Canadian ones, and roughly 0.55% to convert CAD to USD. TFSA, RRSP and FHSA supported.</p>
         <div class="trading-bonus">🎁 <span>Up to $150 CAD + free commission card</span></div>
-        <p class="card-howto"><strong>To qualify:</strong> the bonus is tiered by deposit size and how long you hold the funds. Check the current promo terms on the signup page.</p>
-      </a>
+        <p class="card-howto"><strong>To qualify:</strong> tiered by deposit size and holding period — "up to" is doing real work here. Check current terms at signup.</p>
+        <div class="card-actions">
+          <a class="card-cta" href="https://www.moomoo.com/ca/events/referral?global_content=%7B%22promote_id%22%3A14334%2C%22sub_promote_id%22%3A1%2C%22invite%22%3A76715117%7D" target="_blank" rel="sponsored noopener">Get the bonus →</a>
+          <a class="card-review" href="moomoo-referral-code.html">Full review</a>
+        </div>
+      </div>
 
       <a class="trading-card qt" href="https://start.questrade.com/?oaa_promo=626130488496851&amp;s_cid=RAF14_share_link_refer_a_friend_email&amp;utm_medium=share_link&amp;utm_source=refer_a_friend&amp;utm_campaign=RAF14&amp;utm_content=personalized_link" target="_blank" rel="sponsored noopener">
         <div class="card-header">
@@ -307,10 +334,10 @@
     <h2>How to pick your first platform</h2>
     <div class="prose">
       <p>If you have never bought cryptocurrency before, the honest answer is that the platform matters less than simply starting small. Every exchange on this page is registered with FINTRAC and legal across Canada, so the real differences come down to fees, how much hand-holding the app gives you, and how big the welcome bonus is.</p>
-      <p><strong>If you just want to own some Bitcoin and not think about it:</strong> start with Shakepay. There are no trading screens, deposits by Interac e-Transfer are free, and you can buy $25 worth without understanding anything about order books.</p>
-      <p><strong>If you want the lowest fees:</strong> NDAX charges 0.2% per trade, which is well below what the beginner-friendly apps charge on a spread basis. It is Canadian-owned and built for this market, but the interface assumes you know what a limit order is.</p>
-      <p><strong>If you want crypto and stocks in one place:</strong> Wealthsimple holds both, commission-free, inside a TFSA. The crypto fees are higher than a dedicated exchange, but having everything in one registered account is worth a lot for most people.</p>
-      <p><strong>If you plan to trade actively:</strong> Kraken has the deepest selection and a long security track record. Moomoo and Questrade are the equivalents on the stock side.</p>
+      <p><strong>If you just want to own some Bitcoin and not think about it:</strong> start with <a href="shakepay-referral-code.html">Shakepay</a>. There are no trading screens, deposits by Interac e-Transfer are free, and you can buy $25 worth without understanding anything about order books. The catch is the spread, which can reach around 3% per trade.</p>
+      <p><strong>If you want the lowest fees:</strong> <a href="ndax-referral-code.html">NDAX</a> charges 0.2% per trade, well below what the beginner-friendly apps take on a spread basis. It is Canadian-owned and built for this market, but the interface assumes you know what a limit order is.</p>
+      <p><strong>If you want to start investing, not just buy crypto:</strong> <a href="wealthsimple-referral-code.html">Wealthsimple</a> gives you commission-free stocks and ETFs inside a TFSA, RRSP or FHSA, and that is where most Canadians should actually begin. One correction worth making, because a lot of pages get it wrong: <strong>crypto at Wealthsimple cannot go in a TFSA or RRSP</strong> — it sits in a separate non-registered account and costs 2% per trade on the standard plan.</p>
+      <p><strong>If you plan to trade actively:</strong> <a href="moomoo-referral-code.html">Moomoo</a> hands you Level 2 data and professional charting for free, which is a genuine saving if you use them. Kraken is the equivalent on the crypto side, with the deepest selection and a long security record.</p>
       <p>A word on stacking bonuses: nothing stops you from opening several accounts and claiming each welcome bonus, and plenty of Canadians do exactly that. Just remember that each one requires its own identity verification and, in most cases, a minimum deposit — so read the qualification line on each card above before you commit money you were not planning to invest.</p>
     </div>
   </section>
