@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stayeasycanada.github.io/crypto-for-canadians/sitemap.xml
